@@ -17,10 +17,10 @@
 $("document").ready(function(){
 	function bindCheckBoxAndTextInput(checkboxId, textInputId){
 		if ($(checkboxId).is(':checked') == true){
-	        $(textInputId).val('0').prop('disabled', false);
+	        $(textInputId).val('1').prop('disabled', false);
 	        
 	    } else {
-	        $(checkboxId).val('').prop('disabled', true);
+	        $(textInputId).val('').prop('disabled', true);
 	        
 	    }
 	}
