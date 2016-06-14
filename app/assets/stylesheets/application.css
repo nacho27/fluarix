@@ -13,3 +13,227 @@
  *= require_tree .
  *= require_self
  */
+@import url("normalize.css");
+body{
+	margin: 0;
+	padding: 0;
+	font-size: 16px;
+}
+
+.wrapper{
+	width: 600px;
+	margin: 0 auto;
+}
+fieldset{
+	border: 0 none;
+	text-align: center;
+	padding: 10px;
+}
+fieldset>*{
+	display: inline-block;
+}
+section{
+	text-align: center;
+	margin-top: 20px;
+
+}
+input[type="text"], input[type="number"]{
+	border: 0 none;
+	border-bottom-right-radius: 15px;
+	font-size: 1rem;
+	font-weight: bold;
+	height: 2rem;
+	width: 250px;
+	background-color: white;
+
+}
+input[type="number"].quiz-input{
+	border-bottom: 1px solid black;
+	border-radius: 0;
+	width: 80px;
+	text-align:right;
+	font-weight:bold;
+	padding-right: 10px;
+}
+#speciality p{
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+#lbl-speciality{
+	font-size: 1.5rem;
+	color: #008236;
+}
+.section-header{
+	background-color: #eff5ef;
+	width: 100%;
+	border-bottom-left-radius: 20px;
+}
+.callout{
+	background-image: url('callout.png');
+	background-size: 95px auto;
+	background-repeat: no-repeat;
+	width: 95px;
+	height: 52px;
+	color: white;
+	font-size: 1.2rem;
+	vertical-align: middle;
+	line-height: 38px;
+	margin-top: -20px;
+	margin-left: 10px;
+}
+.quiz{
+	border-bottom: 1px solid #bfe0cd ;
+	padding-bottom: 20px;
+}
+.quiz-header{
+	border-top: 1px solid #77bb92;
+	background-color: #eff5ef;
+	border-bottom-left-radius: 15px;
+	margin-top: 40px;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+.quiz-header{
+	/*padding: 20px;*/
+}
+.quiz-title{
+	font-size: 1.5rem;
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+.quiz-title span{
+	color: #008236;
+	font-weight: normal;
+}
+.quiz-body>* {
+	display: inline-block;
+	padding-left: 5px;
+
+}
+.quiz-body{
+	text-align: left;
+	padding-left:40px;
+}
+.col{
+	width: 40%;
+	display: inline-block;
+	height: 50;
+	text-align: left;
+	vertical-align: top;
+}
+.col-r{
+	margin-left: 50px;
+}
+.col>div{
+	margin-bottom:20px;
+}
+.col-full{
+	width: 100%;
+	padding-left: 10px;
+	text-align: left;
+}
+.col-full>div{
+	margin-bottom: 20px;
+}
+
+input[type=radio]{
+	/*display: none;*/
+}
+
+
+
+#submit-btn { 
+	outline: none;
+	padding: 0;
+	border: none;
+	background: none;	
+	cursor:pointer;
+}
+.fill-in-blank{
+	margin-left: 20px;
+}
+footer{
+	font-size: 0.8rem;
+	line-height: 1rem;
+	margin-top: 50px;
+}
+footer a{
+	color: #008236;
+	text-decoration: none;
+}
+
+#txt-speciality {
+	text-align: center;
+	padding-left:20px;
+	padding-right:20px;
+}
+input[type=checkbox]:not(old),
+input[type=radio   ]:not(old){
+  width     : 2em;
+  margin    : 0;
+  padding   : 0;
+  font-size : 1em;
+  opacity   : 0;
+}
+
+input[type=checkbox]:not(old) + label,
+input[type=radio   ]:not(old) + label{
+  display      : inline-block;
+  margin-left  : -2.2em;
+  line-height  : 1.5em;
+}
+
+input[type=checkbox]:not(old) + label > span,
+input[type=radio   ]:not(old) + label > span{
+  display          : inline-block;
+  width            : 0.875em;
+  height           : 0.875em;
+  margin           : 0.25em 0.5em 0.25em 0.25em;
+  border           : 0.0625em solid rgb(192,192,192);
+  border-radius    : 0.5em;
+  background       : rgb(224,224,224);
+  background-image :    -moz-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :     -ms-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :      -o-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image : -webkit-linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  background-image :         linear-gradient(rgb(240,240,240),rgb(224,224,224));
+  vertical-align   : bottom;
+}
+
+input[type=checkbox]:not(old):checked + label > span,
+input[type=radio   ]:not(old):checked + label > span{
+  background-image :    -moz-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :     -ms-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :      -o-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image : -webkit-linear-gradient(rgb(224,224,224),rgb(240,240,240));
+  background-image :         linear-gradient(rgb(224,224,224),rgb(240,240,240));
+}
+
+input[type=checkbox]:not(old):checked + label > span:before{
+  content     : '✓';
+  display     : block;
+  width       : 0.5em;
+  color       : #008236;
+  font-size   : 1.6em;
+  line-height : 0.4em;
+  text-align  : center;
+  text-shadow : 0 0 0.0714em #008236;
+  font-weight : bold;
+}
+
+input[type=radio]:not(old):checked +  label > span > span{
+  display          : block;
+  width            : 0.5em;
+  height           : 0.5em;
+  margin           : 0.125em;
+  border           : 0.0625em solid #008236;
+  border-radius    : 0.5em;
+  background       : #008236;
+  background-image :    -moz-linear-gradient(#008236,#008236);
+  background-image :     -ms-linear-gradient(#008236,#008236);
+  background-image :      -o-linear-gradient(#008236,#008236);
+  background-image : -webkit-linear-gradient(#008236,#008236);
+  background-image :         linear-gradient(#008236,#008236);
+}
+

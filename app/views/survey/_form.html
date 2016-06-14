@@ -1,0 +1,192 @@
+<%= form_tag(controller: "survey", action: "new" , method: "post") do%>
+	<section  id="speciality">
+		<div class="section-header">
+			<fieldset>
+				<label id="lbl-speciality" for="txt-speciality">진료과목:</label>
+				<input id="txt-speciality" class="text-box-round" type="text">
+			</fieldset>
+			
+		</div>
+		<p>
+			인플루엔자 예방과 치료를 위해 힘써주시는 선생님께 진심으로 감사드립니다. <br>
+			귀중한 말씀은 보다 나은 의료 환경을 만들기 위한 자료로 활용하겠습니다. 감사합니다. 
+		</p>
+		<div >
+
+			<span><strong>아래 제시된 설문중 해당하는 보기에</strong></span>
+			
+			<%= image_tag("checked.png", alt: "checked") %>
+			<span><strong>로 체크해주세요.</strong></span>
+		</div>
+
+	</section>
+	<section id="quiz-1" class="quiz">
+		<div class="quiz-header">
+			<div class="callout">
+				Quiz _01
+			</div>
+			
+				<h2 class="quiz-title">
+				지난 2015년 독감 접종 기간 중 <br>
+				<span>4가 독감백신(플루아릭스<sup>&trade;</sup> 테트라)를 접종하신 경험이</span><br />
+				있으십니까?
+				</h2>
+			</div>
+			
+			
+			<div class="quiz-body">
+				<div class="col">
+					<div>
+
+						<input id="q1Ans1" type="radio" name="exp" value="0"/>
+						<label class="radio-label" for="q1Ans1"><span><span></span></span>접종 경험 있음</label>
+					</div>
+						
+					
+				</div>
+				<div class="col col-r">
+					<div>
+						<input id="q1Ans2" type="radio" name="exp" value="1" />
+						<label class="radio-label" for="q1Ans2"><span><span></span></span>접종 경험 없음</label>
+					</div>
+					
+				</div>
+				</div>
+			
+			
+		
+		
+	</section>
+
+	<section id="quiz-2" class="quiz">
+		<div class="quiz-header">
+			<div class="callout">
+				Quiz _02
+			</div>
+			
+				<h2 class="quiz-title">
+				[플루아릭스<sup>&trade;</sup> 테트라 접종 경험이 있으시면 답변해주십시오] <br>
+				총 접종 환자수를 10명으로 가정하였을 때, <br>
+				<span>아래 환자 그룹별 접종 환자수는 몇명</span>입니까?
+				</h2>
+			</div>
+			
+			
+			<div class="quiz-body">
+				<div class="col">
+					 <div>
+					 	<input id="q2Chk1" type="checkbox" value="1"/>
+						<label class="radio-label" for="q2Chk1"><span><span></span></span>접종 경험 있음</label><br>
+						<div class="fill-in-blank">
+						(총 10명 중
+							<input id="q2Ans1" class="quiz-input" type="number" disabled>
+							명)
+						</div>
+					 </div>
+					 <div>
+					 	<input id="q2Chk2" type="checkbox" value="2" />
+						<label class="radio-label" for="q2Chk2"><span><span></span></span>기타 만성질환 환자</label><br>
+						<div class="fill-in-blank">
+						(총 10명 중
+							<input id="q2Ans2" class="quiz-input" type="number" disabled>
+							명)
+						</div>
+					 </div>
+						
+					<div>
+					 	<input id="q2Chk3" type="checkbox" value="3"/>
+						<label class="radio-label" for="q2Chk3"><span><span></span></span>1~4번에 해당되지 않는 환자</label><br>
+						<div class="fill-in-blank">
+						(총 10명 중
+							<input id="q2Ans3" class="quiz-input" type="number" disabled>
+							명)
+						</div>
+					 </div>
+					
+				</div>
+				<div class="col col-r">
+					<div>
+					 	<input id="q2Chk4" type="checkbox" value="4"/>
+						<label class="radio-label" for="q2Chk4"><span><span></span></span>만성 호흡기 환자</label><br>
+						<div class="fill-in-blank">
+						(총 10명 중
+							<input id="q2Ans4" class="quiz-input" type="number" disabled>
+							명)
+						</div>
+					 </div>
+					 <div>
+					 	<input id="q2Chk5" type="checkbox" value="5"/>
+						<label class="radio-label" for="quiz1_v1" for="q2Chk5" ><span><span></span></span>만성질환이 없는 50세~65세</label><br>
+						<div class="fill-in-blank">
+						(총 10명 중
+							<input id="q2Ans5" class="quiz-input" type="number" disabled>
+							명)
+						</div>
+					 </div>
+				</div>
+			</div>
+			
+	</section>
+
+	<section id="quiz-3" class="quiz">
+		<div class="quiz-header">
+			<div class="callout">
+				Quiz _03
+			</div>
+			
+				<h2 class="quiz-title">
+					다음 중 기억에 남는<br /><span>플루아릭스<sup>&trade;</sup> 테트라의 키 메시지</span>는 무엇입니까?
+				</h2>
+			</div>
+			
+			
+			<div class="quiz-body">
+				<div class="col-full">
+					
+					<div>
+						<input id="q3Ans1" type="checkbox" value="1"/>
+						<label class="radio-label" for="q3Ans1">
+							<span><span></span></span>
+							국내 최초 4가 인플루엔자 백신<sup>23</sup>
+						</label>
+					 </div>
+
+
+					<div>
+					 	<input id="q3Ans2" type="checkbox" value="2"/>
+						<label class="radio-label" for="q3Ans2">
+							<span><span></span></span>
+							미국 FDA, 영국 MHRA, 독일 PEI 승인 받은 국내 유일 4가 백신<sup>24-26</sup>
+						</label>
+					 </div>
+					
+				
+					
+					<div>
+						<input id="q3Ans3" type="checkbox" value="3"/>						 	
+						<label class="radio-label" for="q3Ans3">
+							<span><span></span></span>
+							세계 22개국에서 허가, 1억 도즈 이상 판매<sup>23</sup>
+						</label>
+					 </div>
+					 <div>
+						 <input id="q3Ans4" type="checkbox" value="4"/>
+						<label class="radio-label" for="q3Ans4">
+							<span><span></span></span>
+							세계백신 판매 1위 GSK에서 생산<sup>21</sup>
+						</label>
+					 </div>
+				</div>
+				
+			</div>
+			
+	</section>
+
+	<section id="submit">
+		<a href="../surveySubmitted/surveySubmitted.html" id="submit-btn">
+			<%= image_tag("submit-button.png", alt: "submit") %>
+		</a>
+	</section>
+<% end %>
+
+			

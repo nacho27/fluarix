@@ -1,14 +1,44 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Fluarix</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
 
-<%= yield %>
+	<head>
+	<meta charset="UTF-8">
+		<title>Fluarix - Survey</title>
+		
+		
+		<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	    <%= csrf_meta_tags %>
+	</head>
+	<body>
+		<div class="wrapper">
 
-</body>
+			<header>
+				<%= image_tag("header.jpg", alt: "header") %>
+				
+			</header>
+
+			<%= yield %>
+
+			<footer>
+				<%= image_tag("logo_footer.png", alt: "logo") %>
+				
+				<p>
+					이 이메일은 의사 선생님만을 대상으로 한 것이며 이상사례보고의 용도로는 사용할 수 없습니다. <br>
+					이 이메일 주소는 발신전용으로 수신이 불가하며 gsk에서 모니터링되지 않으니 문의사항이 있으시면 아래 연락처로 연락주시기 바랍니다. <br>
+					GlaxoSmithKline Korea Ltd. | (우)140-702 서울특별시 용산구 한강대로 92 9층(한강로 2가, LS용산타워) <br>
+					대표자 : 홍유석 사업자등록번호 : 106-81-56683 | Tel: 080-901-4100 <br>
+					· 최신 제품 설명서 전문은 여기를 클릭해주세요.(<a href="https://www.gsk-korea.co.kr/upload/product/Fluarix_20150701[2].pdf">플루아릭스<sup>&trade;</sup> 테트라 제품설명서</a>) <br>
+					· GSK 제품 사용 중 발생한 이상사례(부작용)는 080-901-4100 또는 kr-medical.drug-safety@gsk.com으로 보고해 주시기 바랍니다. <br>
+					본 메일은 정보통신망 이용촉진 및 개인정보보호 등에 관한 법률에 의거 2016년 6월 2일 기준으로 메일수신에 동의하신 선생님께 발송되는 발신전용 메일입니다. <br>
+					㈜ 글락소스미스클라인에서 제공하는 이메일의 수신을 원치 않으시면 <a href="#">[수신거부]</a>를 클릭하여 주시거나 당사 고객센터(번호: 080-901-4100)를 이용하여 주시기 바랍니다. <br>
+					Please click <a href="#">[unsubscribe]</a>  if you do not wish to receive this e-mail.
+					</p>
+					<p>
+					&copy; 2015. GlaxoSmithKline Korea Limited. All Rights Reserved.
+				</p>
+		</footer>
+		</div>
+
+	</body>
 </html>

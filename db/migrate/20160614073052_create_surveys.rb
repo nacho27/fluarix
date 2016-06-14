@@ -3,7 +3,7 @@ class CreateSurveys < ActiveRecord::Migration
     create_table :surveys do |t|
       t.text :deviceId
       t.string :faculty
-      t.int :q1Ans
+      t.integer :q1Ans
       t.text :q2Ans
       t.string :q3Ans
 

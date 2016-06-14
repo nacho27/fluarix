@@ -14,3 +14,31 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+$("document").ready(function(){
+	function bindCheckBoxAndTextInput(checkboxId, textInputId){
+		if ($(checkboxId).is(':checked') == true){
+	        $(textInputId).val('0').prop('disabled', false);
+	        
+	    } else {
+	        $(checkboxId).val('').prop('disabled', true);
+	        
+	    }
+	}
+	
+	$('#q2Chk1').change(function(){
+		bindCheckBoxAndTextInput('#q2Chk1','#q2Ans1');
+	});
+	$('#q2Chk2').change(function(){
+		bindCheckBoxAndTextInput('#q2Chk2','#q2Ans2');
+	});
+	$('#q2Chk3').change(function(){
+		bindCheckBoxAndTextInput('#q2Chk3','#q2Ans3');
+	});
+	$('#q2Chk4').change(function(){
+		bindCheckBoxAndTextInput('#q2Chk4','#q2Ans4');
+	});
+	$('#q2Chk5').change(function(){
+		bindCheckBoxAndTextInput('#q2Chk5','#q2Ans5');
+	});
+	
+});
