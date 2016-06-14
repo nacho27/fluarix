@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  deviceId: MyText
+  faculty: MyString
+  q1Ans: 
+  q2Ans: MyText
+  q3Ans: MyString
+
+two:
+  deviceId: MyText
+  faculty: MyString
+  q1Ans: 
+  q2Ans: MyText
+  q3Ans: MyString
