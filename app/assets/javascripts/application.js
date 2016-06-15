@@ -14,7 +14,13 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+//= require fingerprint
+
 $("document").ready(function(){
+
+	var fingerprint = new Fingerprint().get();
+	$('#survey_deviceId').val(fingerprint);
+	console.log(fingerprint);
 	function bindCheckBoxAndTextInput(checkboxId, textInputId){
 		if ($(checkboxId).is(':checked') == true){
 	        $(textInputId).val('1').prop('disabled', false);
@@ -24,6 +30,7 @@ $("document").ready(function(){
 	        
 	    }
 	}
+
 	
 	$('#q2Chk1').change(function(){
 		bindCheckBoxAndTextInput('#q2Chk1','#q2Ans1');

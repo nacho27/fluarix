@@ -11,16 +11,35 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160614073052) do
+ActiveRecord::Schema.define(version: 20160615041058) do
+
+  create_table "q3_ans", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "q3_ans_surveys", id: false, force: :cascade do |t|
+    t.integer "q3_an_id",  null: false
+    t.integer "survey_id", null: false
+  end
+
+  add_index "q3_ans_surveys", ["q3_an_id"], name: "index_q3_ans_surveys_on_q3_an_id"
+  add_index "q3_ans_surveys", ["survey_id"], name: "index_q3_ans_surveys_on_survey_id"
 
   create_table "surveys", force: :cascade do |t|
     t.text     "deviceId"
     t.string   "faculty"
     t.integer  "q1Ans"
-    t.text     "q2Ans"
-    t.string   "q3Ans"
+    t.integer  "q2Ans1"
+    t.integer  "q2Ans2"
+    t.integer  "q2Ans3"
+    t.integer  "q2Ans4"
+    t.integer  "q2Ans5"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "surveys", ["deviceId", "faculty"], name: "index_surveys_on_deviceId_and_faculty", unique: true
 
 end

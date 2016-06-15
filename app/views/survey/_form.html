@@ -1,9 +1,21 @@
-<%= form_tag(controller: "survey", action: "new" , method: "post") do%>
+<%= form_for @survey, url: {action: "create"} do %>
+<% if @survey.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
+
+      <ul>
+      <% @survey.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+	<input name="survey[deviceId]" id="survey_deviceId" type="hidden">
 	<section  id="speciality">
 		<div class="section-header">
 			<fieldset>
-				<label id="lbl-speciality" for="txt-speciality">진료과목:</label>
-				<input id="txt-speciality" class="text-box-round" type="text">
+				<label id="lbl-speciality" for="survey_faculty">진료과목:</label>
+				<input id="survey_faculty" name="survey[faculty]" class="text-box-round" type="text">
 			</fieldset>
 			
 		</div>
@@ -38,16 +50,16 @@
 				<div class="col">
 					<div>
 
-						<input id="q1Ans1" type="radio" name="exp" value="0"/>
-						<label class="radio-label" for="q1Ans1"><span><span></span></span>접종 경험 있음</label>
+						<input id="survey_q1Ans1" type="radio" name="survey[q1Ans]" value="1"/>
+						<label class="radio-label" for="survey_q1Ans1"><span><span></span></span>접종 경험 있음</label>
 					</div>
 						
 					
 				</div>
 				<div class="col col-r">
 					<div>
-						<input id="q1Ans2" type="radio" name="exp" value="1" />
-						<label class="radio-label" for="q1Ans2"><span><span></span></span>접종 경험 없음</label>
+						<input id="survey_q1Ans2" type="radio" name="survey[q1Ans]" value="0" />
+						<label class="radio-label" for="survey_q1Ans2"><span><span></span></span>접종 경험 없음</label>
 					</div>
 					
 				</div>
@@ -79,7 +91,7 @@
 						<label class="radio-label" for="q2Chk1"><span><span></span></span>접종 경험 있음</label><br>
 						<div class="fill-in-blank">
 						(총 10명 중
-							<input id="q2Ans1" class="quiz-input" type="number" placeholder="몇" min="1" max="10"  disabled>
+							<input id="survey_q2Ans1" name="survey[q2Ans1]" class="quiz-input" type="number" placeholder="몇" min="1" max="10"  disabled>
 							명)
 						</div>
 					 </div>
@@ -88,7 +100,7 @@
 						<label class="radio-label" for="q2Chk2"><span><span></span></span>기타 만성질환 환자</label><br>
 						<div class="fill-in-blank">
 						(총 10명 중
-							<input id="q2Ans2" class="quiz-input" type="number" placeholder="몇" min="1" max="10"   disabled>
+							<input id="survey_q2Ans2" name="survey[q2Ans2]" class="quiz-input" type="number" placeholder="몇" min="1" max="10"   disabled>
 							명)
 						</div>
 					 </div>
@@ -98,7 +110,7 @@
 						<label class="radio-label" for="q2Chk3"><span><span></span></span>1~4번에 해당되지 않는 환자</label><br>
 						<div class="fill-in-blank">
 						(총 10명 중
-							<input id="q2Ans3" class="quiz-input" type="number" placeholder="몇" min="1" max="10"    disabled>
+							<input id="survey_q2Ans3" name="survey[q2Ans3]" class="quiz-input" type="number" placeholder="몇" min="1" max="10"    disabled>
 							명)
 						</div>
 					 </div>
@@ -110,7 +122,7 @@
 						<label class="radio-label" for="q2Chk4"><span><span></span></span>만성 호흡기 환자</label><br>
 						<div class="fill-in-blank">
 						(총 10명 중
-							<input id="q2Ans4" class="quiz-input" type="number" placeholder="몇" min="1" max="10"    disabled>
+							<input id="survey_q2Ans4" name="survey[q2Ans4]" class="quiz-input" type="number" placeholder="몇" min="1" max="10"    disabled>
 							명)
 						</div>
 					 </div>
@@ -119,7 +131,7 @@
 						<label class="radio-label" for="quiz1_v1" for="q2Chk5" ><span><span></span></span>만성질환이 없는 50세~65세</label><br>
 						<div class="fill-in-blank">
 						(총 10명 중
-							<input id="q2Ans5" class="quiz-input" type="number" placeholder="몇" min="1" max="10"    disabled>
+							<input id="survey_q2Ans5" name="survey[q2Ans5]" class="quiz-input" type="number" placeholder="몇" min="1" max="10"    disabled>
 							명)
 						</div>
 					 </div>
@@ -144,8 +156,8 @@
 				<div class="col-full">
 					
 					<div>
-						<input id="q3Ans1" type="checkbox" value="1"/>
-						<label class="radio-label" for="q3Ans1">
+						<input id="survey_q3_an_ids_1" name="survey[q3_an_ids][]" type="checkbox" value="1"/>
+						<label class="radio-label" for="survey_q3_an_ids_1">
 							<span><span></span></span>
 							국내 최초 4가 인플루엔자 백신<sup>23</sup>
 						</label>
@@ -153,8 +165,8 @@
 
 
 					<div>
-					 	<input id="q3Ans2" type="checkbox" value="2"/>
-						<label class="radio-label" for="q3Ans2">
+					 	<input id="survey_q3_an_ids_2" name="survey[q3_an_ids][]" type="checkbox" value="2"/>
+						<label class="radio-label" for="q3Ans_Ans2">
 							<span><span></span></span>
 							미국 FDA, 영국 MHRA, 독일 PEI 승인 받은 국내 유일 4가 백신<sup>24-26</sup>
 						</label>
@@ -163,15 +175,15 @@
 				
 					
 					<div>
-						<input id="q3Ans3" type="checkbox" value="3"/>						 	
-						<label class="radio-label" for="q3Ans3">
+						<input id="survey_q3_an_ids_3" name="survey[q3_an_ids][]" type="checkbox" value="3"/>						 	
+						<label class="radio-label" for="q3Ans_Ans3">
 							<span><span></span></span>
 							세계 22개국에서 허가, 1억 도즈 이상 판매<sup>23</sup>
 						</label>
 					 </div>
 					 <div>
-						 <input id="q3Ans4" type="checkbox" value="4"/>
-						<label class="radio-label" for="q3Ans4">
+						 <input id="survey_q3_an_ids_4" name="survey[q3_an_ids][]" type="checkbox" value="4"/>
+						<label class="radio-label" for="q3Ans_Ans4">
 							<span><span></span></span>
 							세계백신 판매 1위 GSK에서 생산<sup>21</sup>
 						</label>
@@ -183,9 +195,9 @@
 	</section>
 
 	<section id="submit">
-		<a href="../surveySubmitted/surveySubmitted.html" id="submit-btn">
+		<button type="submit" id="submit-btn">
 			<%= image_tag("submit-button.png", alt: "submit") %>
-		</a>
+		</button>
 	</section>
 <% end %>
 
