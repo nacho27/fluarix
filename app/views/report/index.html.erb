@@ -1,0 +1,4 @@
+<% if user_signed_in? %>
+	User: <%= current_user.email %>
+	<%= link_to 'Download report as .xlsx', report_index_path(format: :xlsx) %>
+<% end %>

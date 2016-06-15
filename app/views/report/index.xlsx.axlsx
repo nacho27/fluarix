@@ -1,0 +1,10 @@
+wb = xlsx_package.workbook
+wb.add_worksheet(name: "Surveys") do |sheet|
+	@surveys.each do |survey|
+		q3Answer = ''
+		survey.q3_ans.each do |ans|
+			q3Answer = q3Answer + ans.id.to_s + ";"
+		end
+		sheet.add_row [survey.deviceId, survey.faculty, survey.q1Ans, survey.q2Ans1, survey.q2Ans2, survey.q2Ans3, survey.q2Ans4, survey.q2Ans5, q3Answer]
+	end
+end
