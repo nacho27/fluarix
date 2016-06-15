@@ -8,14 +8,14 @@ class Survey < ActiveRecord::Base
 
 	private
 	def is_q2_ans_selected
-		unless @q2An1 || @q2Ans2 || @q2Ans3 || @q2Ans4 || @q2Ans5
-			errors.add(:q2Ans, "Please select at least one for question 2.")
+		unless @q2An1.present? || @q2Ans2.present? || @q2Ans3.present? || @q2Ans4.present? || @q2Ans5.present?
+			errors.add(:q2Ans, "Please select at least one answer for question 2.")
 		end
 	end
 	
 	def require_at_least_one_ans
-		if q3_ans.count == 0
-			errors.add(:q3Ans, "Please select at least one for question 3.")
+		if q3_ans.length == 0
+			errors.add(:q3Ans, "Please select at least one answer for question 3.")
 		end
 
 	end

@@ -33,19 +33,19 @@ $("document").ready(function(){
 
 	
 	$('#q2Chk1').change(function(){
-		bindCheckBoxAndTextInput('#q2Chk1','#q2Ans1');
+		bindCheckBoxAndTextInput('#q2Chk1','#survey_q2Ans1');
 	});
 	$('#q2Chk2').change(function(){
-		bindCheckBoxAndTextInput('#q2Chk2','#q2Ans2');
+		bindCheckBoxAndTextInput('#q2Chk2','#survey_q2Ans2');
 	});
 	$('#q2Chk3').change(function(){
-		bindCheckBoxAndTextInput('#q2Chk3','#q2Ans3');
+		bindCheckBoxAndTextInput('#q2Chk3','#survey_q2Ans3');
 	});
 	$('#q2Chk4').change(function(){
-		bindCheckBoxAndTextInput('#q2Chk4','#q2Ans4');
+		bindCheckBoxAndTextInput('#q2Chk4','#survey_q2Ans4');
 	});
 	$('#q2Chk5').change(function(){
-		bindCheckBoxAndTextInput('#q2Chk5','#q2Ans5');
+		bindCheckBoxAndTextInput('#q2Chk5','#survey_q2Ans5');
 	});
 	
 });

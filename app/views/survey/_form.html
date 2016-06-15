@@ -4,7 +4,7 @@
       <h2><%= pluralize(@survey.errors.count, "error") %> prohibited this survey from being saved:</h2>
 
       <ul>
-      <% @survey.errors.full_messages.each do |message| %>
+      <% @survey.errors.each do |attr,message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -91,7 +91,7 @@
 						<label class="radio-label" for="q2Chk1"><span><span></span></span>접종 경험 있음</label><br>
 						<div class="fill-in-blank">
 						(총 10명 중
-							<input id="survey_q2Ans1" name="survey[q2Ans1]" class="quiz-input" type="number" placeholder="몇" min="1" max="10"  disabled>
+							<input id="survey_q2Ans1" name="survey[q2Ans1]" class="quiz-input"  type="number" placeholder="몇" min="1" max="10"  disabled>
 							명)
 						</div>
 					 </div>
