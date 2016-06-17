@@ -1,0 +1,8 @@
+
+production:
+  adapter: mysql2
+  encoding: utf8
+  database: survey_innoboost
+  username: survey_innoboost
+  password: a-super-strong-password
+  host: fluarix.com

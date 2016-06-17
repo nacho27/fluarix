@@ -1,5 +1,9 @@
+
+# -*- coding: utf-8 -*-
 wb = xlsx_package.workbook
 wb.add_worksheet(name: "Surveys") do |sheet|
+
+	sheet.add_row ["Device Id", "Faculty", "접종 경험 있음/없음","접종 경험 있음(명)","기타 만성질환 환자(명)","1~4번에 해당되지 않는 환자(명)","만성 호흡기 환자(명)","만성질환이 없는 50세~65세(명)","키메시지"]
 	@surveys.each do |survey|
 		q3Answer = ''
 		survey.q3_ans.each do |ans|
